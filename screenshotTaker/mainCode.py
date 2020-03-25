@@ -28,7 +28,7 @@ def findCoordinatesOfBoxDrawnByTwoCursorPositions ():
     return boxCoordinates
 
 def collectScreenshotsOfBoxAtGivenCoordinates (coordinates:tuple, nameOfImage:str, relativePathForDirectory:str, numberOfScreenshotsToMake:int=50, needToMakeDirectory=False,  ):
-    scriptDirectory = os.path.dirname(__file__)
+    scriptDirectory = os.getcwd()
     if needToMakeDirectory == True:
         newDirectoryName = os.path.join(scriptDirectory, relativePathForDirectory)
         os.makedirs(newDirectoryName)
